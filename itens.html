@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Itens · Almoxarifado TG</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="conteudo">
+      <div class="topo-usuario"><span>Usuário: <span id="usuarioNome"></span></span></div>
+
+      <div class="page-header">
+        <div>
+          <h1>Itens</h1>
+          <p class="txt-sm muted">Materiais cadastrados e seus status.</p>
+        </div>
+        <div class="botoes">
+          <button class="btn-outline" id="btnRelatorio">Relatório PDF</button>
+          <button class="btn-primary" id="btnNovo">Cadastrar item</button>
+        </div>
+      </div>
+
+      <form id="formItem" class="panel mb grid md-3 oculto">
+        <input type="hidden" name="id">
+        <h2 class="negrito span-all" id="tituloForm">Cadastro de item</h2>
+        <div><label class="label">Nome</label><input class="field" name="nome" placeholder="Coturno"></div>
+        <div><label class="label">Tipo</label><select class="field" name="tipo"></select></div>
+        <div><label class="label">Quantidade</label><input class="field" type="number" min="0" name="quantidade" value="1"></div>
+        <div><label class="label">Prateleira</label><select class="field" name="prateleira_id"></select></div>
+        <div><label class="label">Condição</label><select class="field" name="condicao"></select></div>
+        <div><label class="label">Situação</label><select class="field" name="situacao"></select></div>
+        <p class="msg erro span-all" id="msg"></p>
+        <div class="fim span-all">
+          <button type="button" class="btn-outline" id="btnCancelar">Cancelar</button>
+          <button class="btn-primary">Salvar</button>
+        </div>
+      </form>
+
+      <div class="panel tabela-wrap">
+        <input class="field busca" id="busca" placeholder="Buscar item...">
+        <table class="tbl">
+          <thead><tr><th>Código</th><th>Nome</th><th>Tipo</th><th>Prateleira</th><th>Qtd.</th><th>Situação</th><th>Ações</th></tr></thead>
+          <tbody id="lista"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/itens.js"></script>
+</body>
+</html>

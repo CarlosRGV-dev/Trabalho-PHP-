@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prateleiras · Almoxarifado TG</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="conteudo">
+      <div class="topo-usuario"><span>Usuário: <span id="usuarioNome"></span></span></div>
+
+      <div class="page-header">
+        <div>
+          <h1>Prateleiras</h1>
+          <p class="txt-sm muted">Locais de armazenamento e itens em cada um.</p>
+        </div>
+      </div>
+
+      <form id="formPrateleira" class="panel mb grid md-4">
+        <div><label class="label">Código</label><input class="field" name="codigo" placeholder="C-01"></div>
+        <div><label class="label">Descrição</label><input class="field" name="descricao"></div>
+        <div><label class="label">Setor</label><input class="field" name="setor"></div>
+        <button class="btn-primary">Nova prateleira</button>
+        <p class="msg erro span-all" id="msg"></p>
+      </form>
+
+      <div class="grade-cards" id="cards"></div>
+    </main>
+  </div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/prateleiras.js"></script>
+</body>
+</html>

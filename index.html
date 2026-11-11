@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Almoxarifado TG 02-076 · Itapetininga</title>
-  <meta name="description" content="Sistema de controle de almoxarifado do Tiro de Guerra 02-076." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login · Almoxarifado TG 02-076</title>
+  <meta name="description" content="Sistema de controle de almoxarifado do Tiro de Guerra 02-076.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div id="app">
-    <p style="padding: 2rem; font-size: 0.875rem; color: var(--muted-foreground);">Carregando sistema...</p>
+  <div class="auth-wrap">
+    <div class="panel">
+      <div class="auth-head">
+        <div class="emblem"><span>TG</span><span>02-076</span></div>
+        <div>
+          <h1>Sistema de Almoxarifado</h1>
+          <p class="txt-xs muted">Tiro de Guerra 02-076 · Itapetininga</p>
+        </div>
+      </div>
+      <form id="formLogin" class="pilha">
+        <div><label class="label" for="email">E-mail</label><input class="field" id="email" name="email" placeholder="usuario@gmail.com" autocomplete="username"></div>
+        <div><label class="label" for="senha">Senha</label><input class="field" id="senha" name="senha" type="password" placeholder="Digite sua senha" autocomplete="current-password"></div>
+        <p class="msg erro" id="msg"></p>
+        <button class="btn-primary w-full" id="btnEntrar">Entrar</button>
+        <a href="cadastro.html" class="btn-outline w-full">Cadastrar novo usuário</a>
+      </form>
+    </div>
   </div>
-  <script src="app.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/login.js"></script>
 </body>
 </html>

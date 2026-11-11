@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atiradores · Almoxarifado TG</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="conteudo">
+      <div class="topo-usuario"><span>Usuário: <span id="usuarioNome"></span></span></div>
+
+      <div class="page-header">
+        <div>
+          <h1>Atiradores</h1>
+          <p class="txt-sm muted">Dados essenciais e medidas de cada atirador.</p>
+        </div>
+        <div class="botoes"><button class="btn-primary" id="btnNovo">Cadastrar atirador</button></div>
+      </div>
+
+      <form id="formAtirador" class="panel mb grid md-3 oculto">
+        <input type="hidden" name="id">
+        <h2 class="negrito span-all" id="tituloForm">Novo atirador</h2>
+        <div><label class="label">Número</label><input class="field" name="numero"></div>
+        <div class="md-span-2"><label class="label">Nome completo</label><input class="field" name="nome"></div>
+        <div><label class="label">Contato (telefone)</label><input class="field" name="contato"></div>
+        <div><label class="label">Data de nascimento</label><input class="field" type="date" name="nascimento"></div>
+        <div><label class="label">Altura (m)</label><input class="field" name="altura"></div>
+        <div><label class="label">Tamanho do pé</label><input class="field" name="calcado"></div>
+        <div><label class="label">Tamanho da cabeça</label><input class="field" name="cabeca"></div>
+        <div><label class="label">Tipo sanguíneo</label>
+          <select class="field" name="tipo_sanguineo">
+            <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+            <option>AB+</option><option>AB-</option><option selected>O+</option><option>O-</option>
+          </select></div>
+        <div class="md-span-2"><label class="label">Endereço</label><input class="field" name="endereco"></div>
+        <div><label class="label">Tamanho de roupa</label>
+          <select class="field" name="roupa">
+            <option>PP</option><option>P</option><option selected>M</option><option>G</option><option>GG</option><option>XG</option>
+          </select></div>
+        <p class="msg erro span-all" id="msg"></p>
+        <div class="fim span-all">
+          <button type="button" class="btn-outline" id="btnCancelar">Cancelar</button>
+          <button class="btn-primary">Salvar</button>
+        </div>
+      </form>
+
+      <div class="panel tabela-wrap">
+        <table class="tbl">
+          <thead><tr><th>Nº</th><th>Nome</th><th>Contato</th><th>Sangue</th><th>Altura</th><th>Pé</th><th>Roupa</th><th>Cabeça</th><th>Nascimento</th><th>Ações</th></tr></thead>
+          <tbody id="lista"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/atiradores.js"></script>
+</body>
+</html>

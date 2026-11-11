@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de usuário · Almoxarifado TG</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="auth-wrap">
+    <div class="panel">
+      <div class="auth-head">
+        <div class="emblem"><span>TG</span><span>02-076</span></div>
+        <div>
+          <h1>Cadastro de usuário</h1>
+          <p class="txt-xs muted">Tiro de Guerra 02-076 · Itapetininga</p>
+        </div>
+      </div>
+      <form id="formCadastro" class="pilha">
+        <div><label class="label">Nome completo</label><input class="field" name="nome" placeholder="Subtenente Monteiro"></div>
+        <div><label class="label">E-mail</label><input class="field" type="email" name="email" required placeholder="nome@gmail.com"></div>
+        <div><label class="label">Posto / Graduação</label>
+          <select class="field" name="posto">
+            <option>Soldado</option><option>Cabo</option><option>Sargento</option><option>Subtenente</option><option>Tenente</option>
+          </select>
+        </div>
+        <div class="grid grid-2">
+          <div><label class="label">Senha</label><input class="field" type="password" name="senha"></div>
+          <div><label class="label">Confirmar</label><input class="field" type="password" name="confirma"></div>
+        </div>
+        <p class="msg erro" id="msg"></p>
+        <button class="btn-primary w-full">Cadastrar</button>
+        <a href="index.html" class="btn-outline w-full">Voltar ao login</a>
+      </form>
+    </div>
+  </div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/cadastro.js"></script>
+</body>
+</html>

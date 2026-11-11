@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Configurações · Almoxarifado TG</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="conteudo">
+      <div class="topo-usuario"><span>Usuário: <span id="usuarioNome"></span></span></div>
+
+      <div class="page-header">
+        <div>
+          <h1>Configurações</h1>
+          <p class="txt-sm muted" id="subConta">Conta</p>
+        </div>
+      </div>
+
+      <div class="grid lg-2" style="gap:16px">
+        <form class="panel pilha" id="formPerfil">
+          <h2 class="negrito">Nome e posto</h2>
+          <div><label class="label">Nome completo</label><input class="field" name="nome"></div>
+          <div><label class="label">Posto / Graduação</label>
+            <select class="field" name="posto">
+              <option>Soldado</option><option>Cabo</option><option>Sargento</option><option>Subtenente</option><option>Tenente</option>
+            </select></div>
+          <p class="msg"></p>
+          <button class="btn-primary">Salvar</button>
+        </form>
+
+        <form class="panel pilha" id="formEmail">
+          <h2 class="negrito">Trocar e-mail</h2>
+          <div><label class="label">Novo e-mail</label><input class="field" name="email" placeholder="novo@gmail.com"></div>
+          <div><label class="label">Senha atual</label><input class="field" type="password" name="senha"></div>
+          <p class="msg"></p>
+          <button class="btn-primary">Alterar e-mail</button>
+        </form>
+
+        <form class="panel pilha" id="formSenha">
+          <h2 class="negrito">Trocar senha</h2>
+          <div><label class="label">Senha atual</label><input class="field" type="password" name="atual"></div>
+          <div class="grid grid-2">
+            <div><label class="label">Nova senha</label><input class="field" type="password" name="nova"></div>
+            <div><label class="label">Confirmar</label><input class="field" type="password" name="confirma"></div>
+          </div>
+          <p class="msg"></p>
+          <button class="btn-primary">Alterar senha</button>
+        </form>
+
+        <form class="panel pilha" id="formExcluir">
+          <h2 class="negrito txt-danger">Excluir minha conta</h2>
+          <p class="txt-sm muted">Sua conta será apagada. Os itens, atiradores e cautelas continuam no sistema.</p>
+          <div><label class="label">Digite EXCLUIR para confirmar</label><input class="field" name="confirma"></div>
+          <div><label class="label">Senha</label><input class="field" type="password" name="senha"></div>
+          <p class="msg"></p>
+          <button class="btn-accent">Excluir conta</button>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/configuracoes.js"></script>
+</body>
+</html>

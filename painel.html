@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel de controle · Almoxarifado TG</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="conteudo">
+      <div class="topo-usuario"><span>Usuário: <span id="usuarioNome"></span></span></div>
+
+      <div class="page-header">
+        <div>
+          <h1>Painel de controle</h1>
+          <p class="txt-sm muted">Resumo das operações do almoxarifado.</p>
+        </div>
+      </div>
+
+      <div class="grade-stats">
+        <div class="panel"><p class="txt-xs muted">Itens em estoque</p><p class="stat-valor" id="stEstoque">–</p></div>
+        <div class="panel"><p class="txt-xs muted">Itens cadastrados</p><p class="stat-valor" id="stCadastrados">–</p></div>
+        <div class="panel"><p class="txt-xs muted">Prateleiras</p><p class="stat-valor" id="stPrateleiras">–</p></div>
+        <div class="panel"><p class="txt-xs muted">Cautelas ativas</p><p class="stat-valor" id="stCautelas">–</p></div>
+      </div>
+
+      <div class="grid lg-2 mt" style="gap:16px">
+        <div class="panel">
+          <div class="cab-card">
+            <h2 class="negrito">Últimas movimentações</h2>
+            <a href="movimentacoes.html" class="btn-outline">Ver todas</a>
+          </div>
+          <ul class="lista-simples" id="ultimas"></ul>
+        </div>
+        <div class="panel">
+          <h2 class="negrito" style="margin-bottom:12px">Ações rápidas</h2>
+          <div class="grid grid-2">
+            <a href="itens.html?novo=1" class="btn-primary">Cadastrar item</a>
+            <a href="prateleiras.html" class="btn-primary">Nova prateleira</a>
+            <a href="cautelas.html?novo=1" class="btn-accent">Gerar cautela</a>
+            <a href="itens.html" class="btn-outline">Consultar itens</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/painel.js"></script>
+</body>
+</html>

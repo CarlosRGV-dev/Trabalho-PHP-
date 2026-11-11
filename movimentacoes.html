@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrada e saída · Almoxarifado TG</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="conteudo">
+      <div class="topo-usuario"><span>Usuário: <span id="usuarioNome"></span></span></div>
+
+      <div class="page-header">
+        <div>
+          <h1>Entrada / Saída</h1>
+          <p class="txt-sm muted">Itens não comuns são vinculados a um atirador.</p>
+        </div>
+      </div>
+
+      <form id="formMov" class="panel mb grid md-5">
+        <div><label class="label">Tipo</label>
+          <select class="field" name="tipo"><option>Entrada</option><option selected>Saída</option></select></div>
+        <div><label class="label">Item</label><select class="field" name="item_id"></select></div>
+        <div><label class="label">Atirador</label><select class="field" name="atirador_id"></select></div>
+        <div><label class="label">Quantidade</label><input class="field" type="number" min="1" name="quantidade" value="1"></div>
+        <button class="btn-accent" id="btnRegistrar">Registrar</button>
+        <p class="msg erro span-all" id="msg"></p>
+      </form>
+
+      <div class="panel mb grid md-5" id="filtros">
+        <h2 class="negrito span-all">Relatório em PDF</h2>
+        <div><label class="label">Movimento</label>
+          <select class="field" id="fTipoMov"><option value="">Todos</option><option>Entrada</option><option>Saída</option></select></div>
+        <div><label class="label">Tipo de item</label><select class="field" id="fTipoItem"></select></div>
+        <div><label class="label">Item</label><select class="field" id="fItem"></select></div>
+        <div><label class="label">Atirador</label><select class="field" id="fAtirador"></select></div>
+        <button type="button" class="btn-primary" id="btnPdf">Gerar PDF</button>
+      </div>
+
+      <div class="panel tabela-wrap">
+        <table class="tbl">
+          <thead><tr><th>Data</th><th>Tipo</th><th>Item</th><th>Atirador</th><th>Qtd.</th></tr></thead>
+          <tbody id="lista"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/movimentacoes.js"></script>
+</body>
+</html>

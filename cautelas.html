@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cautelas · Almoxarifado TG</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="conteudo">
+      <div class="topo-usuario"><span>Usuário: <span id="usuarioNome"></span></span></div>
+
+      <div class="page-header">
+        <div>
+          <h1>Cautelas</h1>
+          <p class="txt-sm muted">Cautela gerada a partir dos itens registrados para cada atirador.</p>
+        </div>
+        <div class="botoes"><button class="btn-accent" id="btnNova">Gerar cautela</button></div>
+      </div>
+
+      <form id="formCautela" class="panel mb grid md-3 oculto">
+        <h2 class="negrito span-all">Nova cautela</h2>
+        <div><label class="label">Atirador</label><select class="field" name="atirador_id"></select></div>
+        <div><label class="label">Retirada</label><input class="field" type="date" name="retirada"></div>
+        <div><label class="label">Retorno previsto</label><input class="field" type="date" name="retorno"></div>
+        <div class="span-all txt-sm oculto" id="previaItens"></div>
+        <p class="msg erro span-all" id="msg"></p>
+        <div class="fim span-all">
+          <button type="button" class="btn-outline" id="btnCancelar">Cancelar</button>
+          <button class="btn-accent">Gerar</button>
+        </div>
+      </form>
+
+      <div class="panel tabela-wrap">
+        <table class="tbl">
+          <thead><tr><th>Número</th><th>Atirador</th><th>Retirada</th><th>Retorno</th><th>Itens</th><th>Status</th><th>Ações</th></tr></thead>
+          <tbody id="lista"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/cautelas.js"></script>
+</body>
+</html>
